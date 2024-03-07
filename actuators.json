@@ -1,0 +1,43 @@
+{
+    "ActuatorDigitalMonoPlusLsPlusUM": {
+        "isFileTemplate": true,
+        "body": [
+            "VAR",
+            "  DateTime : ZAux.DateTimeUM;",
+            "  Logger : ZAux.LoggerFile7FFUM(datetime:=DateTime, filePath:='C:\temp\\logfile.log', target:='');",
+            "  Actuator : ZEquipment.ActuatorDigitalMonoPlusLsPlusUM;",
+            "  Step : ZCore.Step(begin:=0, end:=100);",
+            "END_VAR",
+            "DateTime.Cyclic();",
+            "Logger.Cyclic();",
+            "Actuator.Cyclic();",
+            "",
+            "CASE Step.Index OF",
+            "  0:",
+            "    Actuator.SetLogger(Logger);",
+            "    Actuator.SetName(name:='MonostablePlusLsPlus', movePlusName:='Open', moveMinusName:='Close', plusName:='IsOpen', minusName:='IsClosed');",
+            "    Actuator.SetSimulation(mode:=ZEquipment.ActuatorDigitalSimulation.Automatic);",
+            "    Actuator.SetSimulationUncertainty(uncertainty:=10);",
+            "    Actuator.SetDelay(plusStartDuration:=0, plusEndDuration:=0, minusStartDuration:=0, minusEndDuration:=0, stop:=0);",
+            "    Actuator.SetSwitchDuration(plusDuration:=0, minusDuration:=0);",
+            "    Actuator.SetMovementDuration(plusDuration:=3, minusDuration:=3);",
+            "    Actuator.SetTimeout(plusDuration:=5, minusDuration:=0);",
+            "",
+            "    Step.SetNext(10);",
+            "",
+            "  10:",
+            "    IF Step.OnEntry() THEN",
+            "      Actuator.MovePlusAsync(0);",
+            "    END_IF",
+            "",
+            "    IF Actuator.Done THEN",
+            "      Step.SetNext(20);",
+            "    END_IF",
+            "",
+            "  20:",
+            "    ;",
+            "END_CASE"
+        ],
+        "description": ""
+    }
+}
