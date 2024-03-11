@@ -16,19 +16,7 @@
 	"await3": {
 		"prefix": "await3",
 		"body": [
-			"Await3(obj1:=$1, obj2:=$2, obj3:=$3 nextStep:=$4);"
-		],
-		"description": ""
-	},
-	"ifo": {
-		"prefix": "ifo",
-		"body": [
-			"IF $1.Error",
-			"THEN",
-			"  $2",
-			"ELSIF NOT $3.Busy",
-      "  $3",
-      "END_IF"
+			"Await3(obj1:=$1, obj2:=$2, obj3:=$3, nextStep:=$4);"
 		],
 		"description": ""
 	}
