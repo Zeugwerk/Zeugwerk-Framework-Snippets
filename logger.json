@@ -1,13 +1,13 @@
 {
 	"log": {
-		"prefix": "_log",
+		"prefix": ["_log", "log"],
 		"body": [
 			"_logger.${1|Info,Warning,Error,Fatal,Trace|}('${2:message}');"
 		],
 		"description": ""
 	},
 	"logat": {
-		"prefix": "_logat",
+		"prefix": ["_logat", "logat"],
 		"body": [
 			"_logger.${1|AtInfo,AtWarning,AtError,AtFatal,AtTrace|}().WithCondition(${2:condition}).Append('${3:message}').LogMessage('$4');"
 		],
