@@ -2,8 +2,15 @@
 	"log": {
 		"prefix": "log",
 		"body": [
-			"_logger.${1|Info,Warning,Error,Fatal,Trace|}(\"${2:message}\")"
+			"_logger.${1|Info,Warning,Error,Fatal,Trace|}(\"${2:message}\");"
 		],
 		"description": ""
-	}
+	},
+	"logat": {
+		"prefix": "logat",
+		"body": [
+			"_logger.${1|AtInfo,AtWarning,AtError,AtFatal,AtTrace|}().WithCondition(${2:conditin}).Append('${3:message}').LogMessage('$4');"
+		],
+		"description": ""
+	}	
 }
