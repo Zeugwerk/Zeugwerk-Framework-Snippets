@@ -9,7 +9,7 @@
 	"logat": {
 		"prefix": "logat",
 		"body": [
-			"_logger.${1|AtInfo,AtWarning,AtError,AtFatal,AtTrace|}().WithCondition(${2:conditin}).Append('${3:message}').LogMessage('$4');"
+			"_logger.${1|AtInfo,AtWarning,AtError,AtFatal,AtTrace|}().WithCondition(${2:condition}).Append('${3:message}').LogMessage('$4');"
 		],
 		"description": ""
 	}	
