@@ -1,0 +1,9 @@
+{
+	"log": {
+		"prefix": "log",
+		"body": [
+			"_logger.${1|Info,Warning,Error,Fatal,Trace|}(\"${2:message}\")"
+		],
+		"description": ""
+	}
+}
