@@ -2,6 +2,7 @@
     "ActuatorDigitalMonoPlusLsPlusUM": {
         "isFileTemplate": true,
         "body": [
+            "PROGRAM ${TM_FILENAME_BASE}",            
             "VAR",
             "  DateTime : ZAux.DateTimeUM;",
             "  Logger : ZAux.LoggerFile7FFUM(datetime:=DateTime, filePath:='C:\temp\\logfile.log', target:='');",
