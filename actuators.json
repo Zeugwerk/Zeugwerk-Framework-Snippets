@@ -1,5 +1,5 @@
 {
-    "${1}DigitalMonoPlusLsPlusUM": {
+    "ActuatorDigitalMonoPlusLsPlusUM": {
         "isFileTemplate": true,
         "body": [
             "PROGRAM ${TM_FILENAME_BASE}",
