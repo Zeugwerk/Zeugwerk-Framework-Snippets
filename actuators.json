@@ -6,7 +6,7 @@
             "VAR",
             "  DateTime : ZAux.DateTimeUM;",
             "  Logger : ZAux.LoggerFile7FFUM(datetime:=DateTime, filePath:='C:\temp\\logfile.log', target:='');",
-            "  ${ActuatorInstance:Actuator} : ZEquipment.ActuatorDigitalMonoPlusLsPlusUM;",
+            "  ${1:ActuatorInstance} : ZEquipment.ActuatorDigitalMonoPlusLsPlusUM;",
             "  Step : ZCore.Step(begin:=0, end:=100);",
             "END_VAR",
             "",
