@@ -9,6 +9,8 @@
             "  Actuator : ZEquipment.ActuatorDigitalMonoPlusLsPlusUM;",
             "  Step : ZCore.Step(begin:=0, end:=100);",
             "END_VAR",
+            "",
+            "",            
             "DateTime.Cyclic();",
             "Logger.Cyclic();",
             "Actuator.Cyclic();",
@@ -37,7 +39,10 @@
             "",
             "  20:",
             "    ;",
-            "END_CASE"
+            "END_CASE",
+            "",
+            "", 
+            "END_PROGRAM"            
         ],
         "description": "ActuatorDigitalMonoPlusLsPlusUM Example"
     }
