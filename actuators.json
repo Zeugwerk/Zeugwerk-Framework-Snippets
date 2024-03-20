@@ -21,7 +21,7 @@
             "    ${instance}.SetName(name:='${instanceName:My Actuator}', movePlusName:='${plusName:Plus}', moveMinusName:='${minusName:Minus}', plusName:='Is${plusName}', minusName:='Is${minusName}');",
             "    ${instance}.SetSimulation(mode:=ZEquipment.ActuatorDigitalSimulation.Automatic);",
             "    ${instance}.SetSimulationUncertainty(uncertainty:=10);",
-            "    ${instance}.SetDelay(plusStartDuration:=${startDelay:0}, plusEndDuration:=${pndDelay:0}, minusStartDuration:=${startDelay}, minusEndDuration:=${endDelay}, stop:=0);",
+            "    ${instance}.SetDelay(plusStartDuration:=${startDelay:0}, plusEndDuration:=${endDelay:0}, minusStartDuration:=${startDelay}, minusEndDuration:=${endDelay}, stop:=0);",
             "    ${instance}.SetSwitchDuration(plusDuration:=0, minusDuration:=0);",
             "    ${instance}.SetMovementDuration(plusDuration:=3, minusDuration:=3);",
             "    ${instance}.SetTimeout(plusDuration:=${timeout:5}, minusDuration:=${timeout});",
