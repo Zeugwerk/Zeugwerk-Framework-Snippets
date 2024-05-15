@@ -1,0 +1,34 @@
+{
+	"test-fb": {
+		"prefix": ["test-fb"],
+    "scope" : "declaration",
+		"body": [
+			"FUNCTION_BLOCK ${TM_FILENAME_BASE} EXTENDS ${TM_FILENAME_BASE/(.*?)Test/${1}/} IMPLEMENTS ZCore.IUnitTest"
+		],
+		"description": "Unittest Functionblock declaration"
+	},
+	"test-method": {
+		"prefix": ["test-method"],
+    "scope" : "declaration",    
+		"body": [
+			"METHOD ${TM_FILENAME_BASE}",
+      "VAR_INPUT",
+      "  assertions : IAssertions;",
+      "END_VAR"
+		],
+		"description": "Unittest method declaration"
+	},
+	"test-method-parametrized": {
+		"prefix": ["test-method-parametrized"],
+    "scope" : "declaration",    
+		"body": [
+      "{attribute 'DataRow(${1})'}",
+			"METHOD ${TM_FILENAME_BASE}",
+      "VAR_INPUT",
+      "  assertions : IAssertions;",
+      "  ${1} : ${2};",      
+      "END_VAR"
+		],
+		"description": "Unittest method declaration"
+	}
+}
