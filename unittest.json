@@ -22,7 +22,7 @@
 		"prefix": ["test-method-parametrized"],
     "scope" : "declaration",    
 		"body": [
-      "{attribute 'DataRow(${3:5})'}",
+      "{attribute 'DataRow(${3:value})'}",
 			"METHOD ${TM_FILENAME_BASE}",
       "VAR_INPUT",
       "  assertions : IAssertions;",
