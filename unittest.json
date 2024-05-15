@@ -22,11 +22,11 @@
 		"prefix": ["test-method-parametrized"],
     "scope" : "declaration",    
 		"body": [
-      "{attribute 'DataRow(${3})'}",
+      "{attribute 'DataRow(${3:5})'}",
 			"METHOD ${TM_FILENAME_BASE}",
       "VAR_INPUT",
       "  assertions : IAssertions;",
-      "  ${1} : ${2};",      
+      "  ${1:param1} : ${2:INT};",      
       "END_VAR"
 		],
 		"description": "Unittest method declaration parametrizeable"
