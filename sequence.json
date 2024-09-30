@@ -25,8 +25,9 @@
 		"body": [
 			"IF _step.OnEntry()",
 			"THEN",
-			"  ;",
-			"END_IF"
+			"  $1:;",
+			"END_IF",
+			"$0"
 		],
 		"description": ""
 	}
