@@ -19,5 +19,16 @@
 			"Await3(obj1:=$1, obj2:=$2, obj3:=$3, nextStep:=$4);"
 		],
 		"description": ""
+	},
+	"_step.OnEntry": {
+		"prefix": ["onentry", "entry"],
+		"body": [
+			"IF _step.OnEntry()",
+			"THEN",
+			"  ;",
+			"END_IF"
+		],
+		"description": ""
 	}
+
 }
